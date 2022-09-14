@@ -1,0 +1,87 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2em auto 0;
+    padding-top: 2em;
+    background-color: $primary-color;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &--wrapper {
+        @include flex(row, space-between, center);
+        width: 85%;
+        margin: 0 auto 2em;
+    }
+
+    &__info {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3 ,1fr);
+        p {
+            @include font($text-font, weight(semibold), 1rem, $text-color-light);
+            margin-bottom: .4em;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                @include font($text-font, weight(regular), .8rem, $text-color-light);
+            }
+        }
+    }
+
+    &__copyrights {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid $text-color-pure-white;
+        &__text {
+            @include font($text-font, weight(regular), .8rem, $text-color-light);
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .footer {
+        &--wrapper {
+            @include flex(row, space-around, flex-start);
+            width: 100%;
+        }
+        &__info {
+            grid-template-columns: repeat(2 ,1fr);
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer {
+        &__info {
+            grid-template-columns: repeat(1 ,1fr);
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .footer {
+        padding-top: 3em;
+        &--wrapper {
+            @include flex(column, space-between, flex-start);
+            width: 85%;
+            margin: 0 auto 2em;
+        }
+        &__socials {
+            margin-bottom: 20px;
+        }
+        &__info {
+            grid-template-columns: repeat(2 ,1fr);
+        }
+    }
+}
+@media screen and (max-width: 340px) {
+    .footer {
+        &__info {
+            grid-template-columns: repeat(1 ,1fr);
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.form {
+    width: 60%;
+    padding: 2em;
+    margin: 2em 0;
+    background-color: $primary-color;
+    border-radius: 20px;
+    &__title {
+        @include font($heading-font, weight(semibold), 1.6rem, $text-color-pure-white);
+        margin-bottom: .5em;
+    }
+    &__description {
+        @include font($text-font, weight(regular), .8rem, $text-color-light);
+    }
+    label {
+        @include font($heading-font, weight(medium), .8rem, $text-color-light);
+        margin-bottom: .5em;
+    }
+    input, textarea {
+        width: 100%;
+        padding: .5em .8em;
+        background-color: $input-bg;
+        color: $text-color-light;
+        border: 1px solid $input-bg;
+        border-radius: 5px;
+        margin-bottom: .2em;
+        transition: border 200ms ease-in;
+
+        &:focus {
+            border: 1px solid $accent-color;
+            outline: none;
+        }
+    }
+    textarea {
+        height: 80px;
+    }
+    .inputs-wrapper {
+        width: 100%;
+        margin: 1.5em 0;
+    }
+    .input-wrapper {
+        width: 100%;
+        height: 80px;
+        margin-bottom: 1em;
+        @include flex(column, flex-start, flex-start);
+    }
+    .input-wrapper.modifier {
+        height: 130px;
+    }
+    &__flex-wrapper {
+        @include flex(row, space-between, center);
+        .input-wrapper {
+            width: 48%;
+        }
+    }
+    .error-message {
+        @include font($text-font, weight(regular), .8rem, #f26767);
+    }
+    .success-message {
+        @include font($text-font, weight(medium), 1rem, $text-color-pure-white);
+        background-color: #36915a;
+        border: 2px solid #1f5936;
+        text-align: center;
+        padding: .4em;
+        margin: 1.2em 0;
+        border-radius: 10px;
+        display: none;
+    }
+    .success-message.open {
+        display: block;
+    }
+}
+@media screen and (max-width: 800px) {
+    .form {
+        &__flex-wrapper {
+            @include flex(column, space-between, center);
+            .input-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 670px) {
+    .form {
+        width: 100%;
+        &__flex-wrapper {
+            @include flex(row, space-between, center);
+            .input-wrapper {
+                width: 48%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .form {
+        margin: 1em 0;
+        padding: 2em 1em;
+        &__flex-wrapper {
+            @include flex(column, space-between, center);
+            .input-wrapper {
+                width: 100%;
+            }
+        }
+        .input-wrapper {
+            margin-bottom: .4em;
+        }
+    }
+}

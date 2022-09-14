@@ -1,0 +1,12 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.logo-img {
+    width: 80px;
+}
+@media screen and (max-width: 425px) {
+    .logo-img {
+        width: 60px;
+    }
+}

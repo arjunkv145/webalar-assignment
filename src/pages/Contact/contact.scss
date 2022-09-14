@@ -1,0 +1,33 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.contact {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2em auto;
+
+    &__title {
+        @include font($heading-font, weight(semibold), 3rem, $primary-color);
+    }
+    &__content {
+        @include flex(row, space-between, flex-start);
+    }
+}
+@media screen and (max-width: 670px) {
+    .contact {
+        &__title {
+            @include font($heading-font, weight(semibold), 2.5rem, $primary-color);
+        }
+        &__content {
+            @include flex(column, space-between, flex-start);
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .contact {
+        &__title {
+            @include font($heading-font, weight(semibold), 2rem, $primary-color);
+        }
+    }
+}

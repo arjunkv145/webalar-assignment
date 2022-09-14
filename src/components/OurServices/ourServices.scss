@@ -1,0 +1,135 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.services {
+    width: 90%;
+    margin: 0 auto;
+    &__wrapper-one {
+        @include flex(row, space-between, center);
+        margin: 3em 0 4em;
+    }
+    &__wrapper-two {
+        @include flex(row, center, center);
+    }
+    &__title {
+        @include font($heading-font, weight(semibold), 3rem, $text-color-pure-white);
+        width: 45%;
+    }
+    &__description {
+        @include font($heading-font, weight(regular), .9rem, $text-color-light);
+        line-height: 1.4;
+        width: 45%;
+    }
+    .service {
+        width: 33%;
+        padding: 0 1.725em;
+        &__icon {
+            width: 50px;
+        }
+        &__icon--wrapper {
+            height: 80px;
+        }
+        &__title {
+            @include font($decorative-font, weight(regular), 1.25rem, $text-color-pure-white);
+            margin-bottom: 1em;
+        }
+        &__description {
+            @include font($heading-font, weight(regular), 0.9rem, $text-color-light);
+            line-height: 1.4;
+        }
+    }
+    .service:nth-child(-n+2) {
+        border-right: 2px solid transparent;
+        border-image: linear-gradient(to bottom, #364F6B, #D9D9D9, #364F6B) 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .services {
+        &__title {
+            @include font($heading-font, weight(semibold), 2.5rem, $text-color-pure-white);
+            width: 48%;
+        }
+        &__description {
+            @include font($heading-font, weight(regular), .8rem, $text-color-light);
+            line-height: 1.4;
+            width: 48%;
+        }
+        .service__description {
+            @include font($heading-font, weight(regular), 0.8rem, $text-color-light);
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .services {
+        &__wrapper-two {
+            @include flex(column, center, center);
+        }
+        &__wrapper-one {
+            @include flex(column, center, center);
+        }
+        &__title {
+            @include font($heading-font, weight(semibold), 2rem, $text-color-pure-white);
+            width: 80%;
+            margin-bottom: .8em;
+        }
+        &__description {
+            width: 80%;
+        }
+        .service {
+            width: 80%;
+            padding: 0 .5em;
+            margin-bottom: 4em;
+            &__icon {
+                width: 80px;
+            }
+            &__icon--wrapper {
+                height: 80px;
+            }
+            &__title {
+                @include font($decorative-font, weight(regular), 1.5rem, $text-color-pure-white);
+                margin-bottom: .5em;
+            }
+            &__description {
+                @include font($heading-font, weight(regular), .9rem, $text-color-light);
+            }
+        }
+        .service:nth-child(-n+2) {
+            border: none;
+            border-image: none;
+        }
+        .service:last-child {
+            .service__icon--wrapper {
+                height: 100px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .services {
+        &__title {
+            width: 100%;
+        }
+        &__description {
+            width: 100%;
+        }
+        .service {
+            width: 100%;
+            &__icon {
+                width: 60px;
+            }
+            &__icon--wrapper {
+                height: 60px;
+            }
+            &__description {
+                @include font($heading-font, weight(regular), .8rem, $text-color-light);
+            }
+        }
+        .service:last-child {
+            .service__icon--wrapper {
+                height: 80px;
+            }
+        }
+    }
+}

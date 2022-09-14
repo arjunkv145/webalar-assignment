@@ -1,0 +1,64 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 3em auto;
+}
+
+.section-one--wrapper {
+    @include flex(row, space-between, center);
+    gap: 30px;
+    width: 95%;
+    margin: 0 auto;
+    img {
+        width: 450px;
+    }
+}
+.section-two {
+    padding: 3em 1em;
+    background-color: $primary-color;
+    border-radius: 20px;
+    hr {
+        width: 90%;
+        margin: 3em auto;
+        background-color: $text-color-light;
+        border: .5px solid $text-color-light;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .section-one--wrapper {
+        img {
+            width: 340px;
+        }
+    }
+}
+@media screen and (max-width: 860px) {
+    .section-one--wrapper {
+        img {
+            width: 280px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .section-one--wrapper {
+        @include flex(column, space-between, center);
+        width: 100%;
+        img {
+            width: 100%;
+            margin: 1em 0;
+        }
+    }
+    .section-two {
+        padding: 3em 0 0 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .section-two {
+        hr {
+            margin: 2em auto;
+        }
+    }
+}

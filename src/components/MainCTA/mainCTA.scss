@@ -1,0 +1,114 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
+
+.main_cta {
+    width: 50%;
+    padding: 2em 0;
+    &__title {
+        @include font($heading-font, weight(semibold), 3.6rem);
+    }
+    &__description {
+        @include font($text-font, weight(regular), 1rem);
+    }
+    &.row {
+        @include flex(row, space-between, center);
+        width: 85%;
+        margin: 0 auto 2em;
+        .main_cta__title {
+            max-width: 40%;
+        }
+        .main_cta__description {
+            max-width: 400px;
+            margin-bottom: 1.25em;
+        }
+    }
+    &.column {
+        @include flex(column, space-between, flex-start);
+        .main_cta__title {
+            margin-bottom: .6em;
+        }
+        .main_cta__description {
+            margin-bottom: 1.4em;
+        }
+    }
+    &.light {
+        .main_cta__title {
+            color: $text-color-pure-white;
+        }
+        .main_cta__description {
+            color: $text-color-light;
+        }
+    }
+    &.dark {
+        .main_cta__title {
+            color: $primary-color;
+        }
+        .main_cta__description {
+            color: $text-color-dark;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main_cta {
+        &__title {
+            @include font($heading-font, weight(semibold), 2.5rem);
+        }
+        &__description {
+            @include font($text-font, weight(regular), .9rem);
+        }
+    }
+}
+@media screen and (max-width: 860px) {
+    .main_cta {
+        &__title {
+            @include font($heading-font, weight(semibold), 1.8rem);
+        }
+        &__description {
+            @include font($text-font, weight(regular), .8rem);
+        }
+        &.row {
+            @include flex(row, space-between, flex-start);
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .main_cta {
+        width: 90%;
+        padding: 0;
+        &__title {
+            @include font($heading-font, weight(semibold), 2.4rem);
+            width: 80%;
+        }
+        &__description {
+            @include font($text-font, weight(regular), .8rem);
+        }
+        &.row {
+            @include flex(column, space-between, flex-start);
+            .main_cta__title {
+                max-width: 60%;
+                margin-bottom: .6em;
+            }
+            .main_cta__description {
+                max-width: 400px;
+                margin-bottom: 1.25em;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .main_cta {
+        &__title {
+            @include font($heading-font, weight(semibold), 2rem);
+            width: 100%;
+        }
+        &__description {
+            @include font($text-font, weight(regular), .8rem);
+        }
+        &.row {
+            .main_cta__title {
+                max-width: 90%;
+            }
+        }
+    }
+}
