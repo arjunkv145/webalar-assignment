@@ -31,16 +31,16 @@ export default function Navbar() {
                 </div>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/webalar-assignment">Home</Link>
                     </li>
                     <li>
-                        <Link to="/">About</Link>
+                        <Link to="/webalar-assignment">About</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/webalar-assignment/contact">Contact</Link>
                     </li>
                     <li>
-                        <Link to="/">
+                        <Link to="/webalar-assignment">
                             <Button>Get in Touch</Button>
                         </Link>
                     </li>

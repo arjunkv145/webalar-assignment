@@ -1,8 +1,9 @@
 @import '../../sassStyles/variables';
 @import '../../sassStyles/functions';
+@import '../../sassStyles/mixins';
 
 .icons {
-    display: flex;
+    @include flex(row, flex-start, center);
     img {
         width: 30px;
         margin-right: 10px;
