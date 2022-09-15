@@ -26,12 +26,12 @@ export default function ContactForm() {
                 success_message.current.className = "success-message open";
                 setTimeout(() => {
                     success_message.current.className = "success-message";
-                }, 1000);
+                }, 2500);
+                reset();
             }, err => {
                 console.log(err);
                 alert("Error occured, couldn't submit form");
             })
-        reset();
     }
     return (
         <form className="form" id="form" onSubmit={handleSubmit(onSubmit)}>
