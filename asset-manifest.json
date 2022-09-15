@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webalar-assignment/static/css/main.4d6914f0.css",
-    "main.js": "/webalar-assignment/static/js/main.ead40c64.js",
+    "main.js": "/webalar-assignment/static/js/main.df5d1b92.js",
     "static/media/main-image.png": "/webalar-assignment/static/media/main-image.baf7008e45f7577eb22f.png",
     "static/media/Maglony-Regular.ttf": "/webalar-assignment/static/media/Maglony-Regular.329d6a9e6a229d3dae6a.ttf",
     "static/media/slick.svg": "/webalar-assignment/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,10 +10,10 @@
     "static/media/slick.woff": "/webalar-assignment/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/webalar-assignment/index.html",
     "main.4d6914f0.css.map": "/webalar-assignment/static/css/main.4d6914f0.css.map",
-    "main.ead40c64.js.map": "/webalar-assignment/static/js/main.ead40c64.js.map"
+    "main.df5d1b92.js.map": "/webalar-assignment/static/js/main.df5d1b92.js.map"
   },
   "entrypoints": [
     "static/css/main.4d6914f0.css",
-    "static/js/main.ead40c64.js"
+    "static/js/main.df5d1b92.js"
   ]
 }
